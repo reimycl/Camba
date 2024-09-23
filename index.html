@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué tipo de camba eres?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title-container">
+        <h1>Descubre qué tipo de camba eres</h1>
+        <p>Responde estas preguntas sobre las costumbres cambas</p>
+    </div>
+
+    <div class="card-container">
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/majadito.webp" alt="Majadito" style="width:95%;height:250px;">
+                    <h3>¿Te gusta el majadito?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <label for="comida">De 0 a 10, ¿cuánto te gusta?</label>
+                    <input type="range" id="comida" name="comida" min="0" max="10" value="5" oninput="updateLabel('comidaLabel', this.value)">
+                    <span id="comidaLabel">5</span>/10
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/taquirari.jpg" alt="Taquirari" style="width:95%;height:250px;">
+                    <h3>¿Bailas Taquirari?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <label for="bailar">De 0 a 10, ¿cuánto te gusta bailar taquirari?</label>
+                    <input type="range" id="bailar" name="bailar" min="0" max="10" value="5" oninput="updateLabel('bailarLabel', this.value)">
+                    <span id="bailarLabel">5</span>/10
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/sombrero.jpg" alt="Sombrero Camba" style="width:95%;height:250px;">
+                    <h3>¿Te gusta usar sombrero camba?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <label for="sombrero">De 0 a 10, ¿cuánto disfrutas usarlo?</label>
+                    <input type="range" id="sombrero" name="sombrero" min="0" max="10" value="5" oninput="updateLabel('sombreroLabel', this.value)">
+                    <span id="sombreroLabel">5</span>/10
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/churrasco.jpg" alt="Churrasco" style="width:95%;height:250px;">
+                    <h3>¿Disfrutas un buen churrasco?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <label for="churrasco">De 0 a 10, ¿cuánto te gusta?</label>
+                    <input type="range" id="churrasco" name="churrasco" min="0" max="10" value="5" oninput="updateLabel('churrascoLabel', this.value)">
+                    <span id="churrascoLabel">5</span>/10
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/camba.jfif" alt="Camba de Corazón" style="width:95%;height:250px;">
+                    <h3>¿Te sientes camba de corazón?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <label for="corazon">De 0 a 10, ¿cuán orgulloso/a te sientes?</label>
+                    <input type="range" id="corazon" name="corazon" min="0" max="10" value="5" oninput="updateLabel('corazonLabel', this.value)">
+                    <span id="corazonLabel">5</span>/10
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img/fiesta.jpg" alt="Fiesta Camba" style="width:95%;height:250px;">
+                    <h3>¿Te gusta la fiesta camba?</h3>
+                </div>
+                <div class="flip-card-back">
+                    <label for="fiesta">De 0 a 10, ¿cuánto disfrutas las fiestas cambas?</label>
+                    <input type="range" id="fiesta" name="fiesta" min="0" max="10" value="5" oninput="updateLabel('fiestaLabel', this.value)">
+                    <span id="fiestaLabel">5</span>/10
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <button onclick="determinarTipoCamba()">Descubrir tu tipo de camba</button>
+
+        <div id="resultadoA">            
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
